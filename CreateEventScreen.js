@@ -318,7 +318,7 @@ WrapperComponent() {
             
 
             <TouchableOpacity
-             style={styles.button}
+             style={[styles.button,{marginBottom:10}]}
              onPress={() => {
               this.initiateActivity()
             }}
