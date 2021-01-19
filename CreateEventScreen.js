@@ -190,9 +190,12 @@ WrapperComponent() {
           };
         return(
 
+          <ScrollView>
           <View style={{flex:1}}>
             {this.WrapperComponent()}
-              <KeyboardAwareScrollView keyboardShouldPersistTaps={true}>
+              <KeyboardAwareScrollView style={{ flex: 1, width: "100%" }}
+        keyboardShouldPersistTaps="always"
+        showsVerticalScrollIndicator={false}>
                 <View>
                 <DateTimePickerModal
                 isVisible={this.state.isDatePickerVisible}
@@ -257,17 +260,6 @@ WrapperComponent() {
                     />
                     }
             />
-                      <TouchableOpacity
-                        style={styles.button}
-                        onPress = {()=>{
-                          this.setState({
-                              isModalVisible:true
-                          })
-                          }}>
-                            <Text  style={styles.buttonText}>
-                              Select Date and time
-                            </Text>
-                      </TouchableOpacity>
             <Input style = {styles.loginBox}
                     placeholder = "Enter ONLY Gender"
                     keyboardType = 'default'
@@ -312,9 +304,20 @@ WrapperComponent() {
                       name='av-timer'
                       size={24}
                       color='black'
-                    />
+                      />
                     }
-            /> */}
+                  /> */}
+                  <TouchableOpacity
+                    style={styles.button}
+                    onPress = {()=>{
+                      this.setState({
+                          isModalVisible:true
+                      })
+                      }}>
+                        <Text  style={styles.buttonText}>
+                          Select Date and time
+                        </Text>
+                  </TouchableOpacity>
             
 
             <TouchableOpacity
@@ -329,6 +332,7 @@ WrapperComponent() {
             </View>
             </KeyboardAwareScrollView>
             </View>
+            </ScrollView>
         );
     }
 }
