@@ -122,7 +122,6 @@ WrapperComponent() {
       transparent={true}
       visible={this.state.isModalVisible}
     >
-      <ScrollView style={styles.scrollview}>
         <View style={styles.signupView}>
         <GooglePlacesAutocomplete
             placeholder="Search"
@@ -169,7 +168,7 @@ WrapperComponent() {
             debounce={200}
           />
           </View>
-      </ScrollView>
+          {/* </View> */}
     </Modal>
   );
       }
@@ -365,11 +364,11 @@ const styles = StyleSheet.create({
       color:"#fff"
     },
     scrollview:{
-      // flex: 1,
+      flex: 1,
       backgroundColor: "#000"
     },
     signupView:{
-      // flex:0.05,
+      flex:1,
       justifyContent:'center',
       // alignItems:'center'
       margin:'3%'
