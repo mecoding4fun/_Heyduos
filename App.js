@@ -75,7 +75,7 @@ const TabNavigator = createBottomTabNavigator({
       }
     },
   })
-  },{background}
+  }
   )
 
   const SwitchNavigator = createSwitchNavigator({
