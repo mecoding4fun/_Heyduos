@@ -190,7 +190,6 @@ WrapperComponent() {
           };
         return(
 
-          <ScrollView>
           <View style={{flex:1}}>
             {this.WrapperComponent()}
               <KeyboardAwareScrollView style={{ flex: 1, width: "100%" }}
@@ -332,7 +331,6 @@ WrapperComponent() {
             </View>
             </KeyboardAwareScrollView>
             </View>
-            </ScrollView>
         );
     }
 }
